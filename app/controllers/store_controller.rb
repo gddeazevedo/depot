@@ -1,4 +1,8 @@
 class StoreController < ApplicationController
+  include StoreAccessCounter
+
+  before_action :set_counter, only: %i[ index ]
+
   def index
     time = Time.now
     @date_time = "#{time.strftime("%d/%m/%Y")} #{time.strftime("%I:%M %p")}"

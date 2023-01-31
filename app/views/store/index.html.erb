@@ -2,7 +2,11 @@
     <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h1>Your Pragmatic Catalog</h1>
+<% if @counter > 5 %>
+  <span>This page was accessed by you <%= pluralize @counter, "time"  %></span>
+<% end %>
+
+<h1>Your Pragmatic Catalog </h1>
 
 <ul class="catalog">
   <% cache @products do %>
