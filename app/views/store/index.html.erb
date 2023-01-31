@@ -16,6 +16,14 @@
           </p>
           <div class="price">
             <%= number_to_currency(product.price) %>
+
+            <%#
+              button to is going to create a form, with method="POST" the  
+              action="/line_items?product_id=..."
+
+              button_tp default HTTP method is POST 
+            %>
+            <%= button_to 'Add to Cart', line_items_path(product_id: product.id) %>
           </div>
         </li>
       <% end %>
