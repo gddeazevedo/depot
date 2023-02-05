@@ -1,10 +1,36 @@
 .carts {
+  div {
+    a {
+      text-decoration: none;
+      background-color: #881;
+      border-radius: 0.354em;
+      border: solid thin #441;
+      color: white;
+      font-size: 1em;
+      padding: 0.354em 1em;
+    }
+
+    a:hover {
+      background-color: #992;
+    }
+  }
+
   table {
     border-collapse: collapse;
   }
 
   td {
     padding: 0.5em;
+  }
+
+  td.remove-item-button {
+    button {
+      background-color: #881;
+      border-radius: 0.354em;
+      border: solid thin #441;
+      color: white;
+      padding: 0.354em 1em;
+    }
   }
 
   td.quantity {
@@ -49,6 +75,7 @@
   
     button:hover {
       background-color: #992;
+      cursor: pointer;
     }
   }
 }
