@@ -1,6 +1,7 @@
 class LineItemsController < ApplicationController
   include CurrentCart
   include StoreAccessCounter
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_line_item
 
   # set_cart is defined in the CurrentCart concern
   before_action :set_cart, only: %i[ create ]
@@ -74,5 +75,10 @@ class LineItemsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def line_item_params
       params.require(:line_item).permit(:product_id)
+    end
+
+    def invalid_line_item
+      logger.error "Attempt to access invalid line item"
+      redirect_to store_index_url, notice: "Invalid line item"
     end
 end
