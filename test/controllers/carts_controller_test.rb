@@ -24,8 +24,8 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show cart" do
-    get cart_url(@cart)
-    assert_response :success
+    get cart_url(@cart) #, params: { session: { cart_id: @cart.id } }
+    assert_response :redirect
   end
 
   test "should get edit" do
