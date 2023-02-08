@@ -75,6 +75,22 @@ header.main {
       color: white;
     }
 
+    #cart {
+      article {
+        h2 {
+          margin-top: 0;
+        }
+        background: white;
+        border-radius: .5em;
+        padding: 1.414em;
+        margin: 1em;
+
+        @media (min-width: 30em) {
+          margin: 0;
+        }
+      }
+    }
+
     ul {
       list-style: none;
       margin: 0;

@@ -1,7 +1,9 @@
 class StoreController < ApplicationController
   include StoreAccessCounter
+  include CurrentCart
 
-  before_action :set_counter, only: %i[ index ]
+  before_action :set_counter
+  before_action :set_cart
 
   def index
     time = Time.now
