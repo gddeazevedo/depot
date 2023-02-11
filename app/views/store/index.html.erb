@@ -28,7 +28,10 @@
               button_tp default HTTP method is POST 
             %>
             <span class="add-to-cart">
-              <%= button_to 'Add to Cart', line_items_path(product_id: product.id) %>
+              <%= button_to 'Add to Cart',
+                line_items_path(product_id: product.id),
+                remote: true 
+              %>
             </span>
           </div>
         </li>
