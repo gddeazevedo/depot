@@ -1,9 +1,12 @@
 version: '3.8'
+
 services:
   db:
     image: postgres
     hostname: postgres
     container_name: depot_db
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
@@ -33,5 +36,6 @@ services:
       - "3000:3000"
     depends_on:
       - db
+
 volumes:
   postgres:

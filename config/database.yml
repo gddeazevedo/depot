@@ -1,22 +1,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: db
   username: postgres
   password: password
   pool: 5
 
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: depot_db_dev
-  pool: 5
-  username: postgres
-  password: password
+  <<: *default
+  database: depot_dev
+
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  username: postgres
-  password: password
-  pool: 5
-  database: depot_db_test
+  <<: *default
+  database: depot_test
