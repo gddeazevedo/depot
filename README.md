@@ -1,24 +1,27 @@
-# README
+# How to
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Steps to run when you first start the project
 
-Things you may want to cover:
+- ## docker compose build
 
-* Ruby version
+- ## docker compose up -d
 
-* System dependencies
+- ## docker compose run web rails db:create
 
-* Configuration
+- ## docker compose run web rails db:migrate
 
-* Database creation
+## Run the project
 
-* Database initialization
+- ## docker compose up -d
 
-* How to run the test suite
+## Stop the project
 
-* Services (job queues, cache servers, search engines, etc.)
+- ## docker compose down
 
-* Deployment instructions
+## Use the database
 
-* ...
+- ## docker exec -it depot_db psql -U postgres
+
+## Use the rails commands:
+
+- ## docker compose run web rails <command\>
