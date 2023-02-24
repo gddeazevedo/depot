@@ -2,26 +2,44 @@
 
 ## Steps to run when you first start the project
 
-- ## docker compose build
+``` bash
+$ docker compose build
 
-- ## docker compose up -d
+$ docker compose up
 
-- ## docker compose run web rails db:create
+$ docker compose run web rails db:create
 
-- ## docker compose run web rails db:migrate
+$ docker compose run web rails db:migrate
+```
 
 ## Run the project
 
-- ## docker compose up -d
+```bash
+$ docker compose up -d
+```
 
 ## Stop the project
 
-- ## docker compose down
+```bash
+$ docker compose down
+```
 
 ## Use the database
 
-- ## docker exec -it depot_db psql -U postgres
+```bash
+$ docker exec -it depot_db psql -U postgres
+```
 
 ## Use the rails commands:
 
-- ## docker compose run web rails <command\>
+```bash
+
+$ docker compose run web rails <command\>
+
+```
+
+## Change owner
+
+```bash
+$ sudo chown -R $USER:$USER .
+```
